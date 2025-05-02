@@ -1,0 +1,86 @@
+.coverContainer {
+  background: #0c0c0c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 30px;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+.coverContainer:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.6) 100%),
+    linear-gradient(180deg, rgba(0,0,0,0.2) 0%, transparent 100%);
+  z-index: 2;
+}
+
+.coverBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.videoBg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: #232a34;
+}
+
+.coverContent {
+  z-index: 3;
+  max-width: 1200px;
+  position: absolute;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.coverH1 {
+  color: #fff;
+  font-size: 56px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .coverH1 {
+      font-size: 44px;
+  }
+}
+
+@media (max-width: 480px) {
+  .coverH1 {
+      font-size: 32px;
+  }
+}
+
+.coverP {
+  margin-top: 24px;
+  color: #fff;
+  font-size: 22px;
+  max-width: 600px;
+}
+
+@media (max-width: 768px) {
+  .coverP {
+      font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .coverP {
+      font-size: 18px;
+  }
+}

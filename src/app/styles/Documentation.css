@@ -1,0 +1,173 @@
+/* Documentation.css */
+.doc-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .doc-wrapper {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+  }
+  
+  .doc-title {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    font-size: 2.2rem;
+  }
+  
+  .doc-subtitle {
+    color: #7f8c8d;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+  }
+  
+  .doc-section {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid #3498db;
+    transition: all 0.3s ease;
+  }
+  
+  .doc-section.expanded {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .doc-header {
+    cursor: pointer;
+  }
+  
+  .doc-heading {
+    color: #2c3e50;
+    margin-top: 0;
+    font-size: 1.4rem;
+  }
+  
+  .doc-summary {
+    color: #34495e;
+    margin-bottom: 1rem;
+  }
+  
+  .doc-toggle {
+    background: none;
+    border: none;
+    color: #3498db;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .doc-toggle:hover {
+    color: #2980b9;
+  }
+  
+  .doc-content {
+    color: #34495e;
+    line-height: 1.7;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+    margin-top: 1rem;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  .doc-content h3 {
+    color: #2980b9;
+    margin-top: 1.5rem;
+  }
+  
+  .doc-content pre {
+    background: #f4f4f4;
+    padding: 1rem;
+    border-radius: 4px;
+    overflow-x: auto;
+  }
+  
+  .doc-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+  }
+  
+  .doc-table th, .doc-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .doc-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .standards-box {
+    background: #e8f4fc;
+    padding: 1rem;
+    border-radius: 6px;
+    margin: 1.5rem 0;
+    border-left: 3px solid #3498db;
+  }
+  
+  .standards-box h4 {
+    margin-top: 0;
+    color: #2c3e50;
+  }
+  
+  .external-links {
+    margin-top: 2rem;
+  }
+  
+  .external-links ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .external-links li {
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+  
+  .external-links li:before {
+    content: "•";
+    color: #3498db;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+  }
+  
+  .external-links a {
+    color: #3498db;
+    text-decoration: none;
+  }
+  
+  .external-links a:hover {
+    text-decoration: underline;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .doc-wrapper {
+      padding: 1.5rem;
+    }
+    
+    .doc-section {
+      padding: 1.2rem;
+    }
+    
+    .doc-table {
+      font-size: 0.9rem;
+    }
+  }

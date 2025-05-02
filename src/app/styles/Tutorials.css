@@ -1,0 +1,120 @@
+/* Tutorials.css */
+.tutorial-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .tutorial-wrapper {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+  }
+  
+  .tutorial-title {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+  }
+  
+  .tutorial-card {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid #3498db;
+    transition: all 0.3s ease;
+  }
+  
+  .tutorial-card.expanded {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .tutorial-header {
+    cursor: pointer;
+  }
+  
+  .tutorial-heading {
+    color: #2c3e50;
+    margin-top: 0;
+    font-size: 1.4rem;
+  }
+  
+  .tutorial-summary {
+    color: #34495e;
+    margin-bottom: 1rem;
+  }
+  
+  .toggle-button {
+    background: none;
+    border: none;
+    color: #3498db;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .toggle-button:hover {
+    color: #2980b9;
+  }
+  
+  .tutorial-content {
+    color: #34495e;
+    line-height: 1.7;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+    margin-top: 1rem;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  .tutorial-content h3 {
+    color: #2980b9;
+    margin-top: 1.5rem;
+  }
+  
+  .tutorial-content ol, .tutorial-content ul {
+    padding-left: 1.5rem;
+  }
+  
+  .tutorial-content li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .tutorial-tips {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  
+  .tip-card {
+    background: #e8f4fc;
+    padding: 1rem;
+    border-radius: 6px;
+    border-left: 3px solid #3498db;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .tutorial-wrapper {
+      padding: 1.5rem;
+    }
+    
+    .tutorial-card {
+      padding: 1.2rem;
+    }
+    
+    .tutorial-tips {
+      grid-template-columns: 1fr;
+    }
+  }

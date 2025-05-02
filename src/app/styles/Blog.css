@@ -1,0 +1,127 @@
+.blog-container {
+    min-height: 100vh;
+    padding: 2rem;
+    background: #f9f9f9;
+  }
+  
+  .blog-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .blog-title {
+    text-align: center;
+    color: #01bf71;
+    margin-bottom: 2rem;
+  }
+  
+  .blog-card {
+    background: white;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .blog-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  }
+  
+  .blog-heading {
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  
+  .blog-date {
+    display: block;
+    color: #666;
+    margin-bottom: 1rem;
+  }
+  
+  .blog-content {
+    color: #444;
+    margin-bottom: 1rem;
+  }
+  
+  .read-more-btn {
+    background: #01bf71;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .blog-detail {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  
+  .back-btn {
+    background: none;
+    border: none;
+    color: #01bf71;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+  
+  .blog-full-content {
+    line-height: 1.6;
+  }
+  
+  .blog-full-content h2 {
+    color: #01bf71;
+    margin: 1.5rem 0 1rem;
+  }
+  
+  .blog-full-content p {
+    margin-bottom: 1rem;
+  }
+  
+  @media (max-width: 768px) {
+    .blog-container {
+      padding: 1rem;
+    }
+  }
+  
+  
+  
+  /* new */
+  .try-tool-btn {
+    display: inline-block;
+    background: #01bf71;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    margin: 1rem 0;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .try-tool-btn:hover {
+    background: #018f55;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+  }
+  
+  th, td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #f5f5f5;
+  }
+  

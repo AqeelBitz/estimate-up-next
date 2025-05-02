@@ -1,0 +1,142 @@
+/* 🌟 Full Page Background */
+.termsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: radial-gradient(circle, #0f172a 30%, #1e293b 100%);
+    padding: 40px 20px;
+  }
+  
+  /* 🌟 Glassmorphism Effect */
+  .termsCard {
+    max-width: 850px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(20px);
+    border-radius: 18px;
+    padding: 40px;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.4);
+    text-align: left;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .termsCard:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 15px 50px rgba(0, 0, 0, 0.6);
+  }
+  
+  /* 🌟 Title Styling */
+  .termsTitle {
+    font-size: 38px;
+    font-weight: bold;
+    color: #ffcc00;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+    text-shadow: 0px 4px 6px rgba(255, 204, 0, 0.4);
+  }
+  
+  /* 🌟 Date Styling */
+  .termsDate {
+    font-size: 15px;
+    color: #f0f4f8;
+    text-align: center;
+    margin-bottom: 25px;
+    font-style: italic;
+    opacity: 0.8;
+  }
+  
+  /* 🌟 Animated Section Headings */
+  .termsContent h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffcc00;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-shadow: 0px 3px 4px rgba(255, 204, 0, 0.5);
+    position: relative;
+    opacity: 0;
+    transform: translateX(-25px);
+    animation: slideInLeft 0.5s ease-in-out forwards;
+  }
+  
+  /* 🌟 Slide-In Animation */
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-25px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* 🌟 Styled Paragraphs */
+  .termsContent p {
+    font-size: 17px;
+    color: #f8fafc;
+    line-height: 1.8;
+    padding-left: 30px;
+    position: relative;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  /* 🌟 Decorative Left Border for Paragraphs */
+  .termsContent p::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 4px;
+    height: 90%;
+    width: 4px;
+    background: #ffcc00;
+    border-radius: 5px;
+  }
+  
+  /* 🌟 Button for Agreement */
+  .acceptButton {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: #ffcc00;
+    color: #1e293b;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px;
+    margin-top: 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .acceptButton:hover {
+    background: #e6b800;
+  }
+  
+  /* 🌟 Responsive Design */
+  @media (max-width: 768px) {
+    .termsCard {
+      max-width: 95%;
+      padding: 25px;
+    }
+  
+    .termsTitle {
+      font-size: 30px;
+    }
+  
+    .termsContent h3 {
+      font-size: 20px;
+    }
+  
+    .termsContent p {
+      font-size: 16px;
+    }
+  }
+  
