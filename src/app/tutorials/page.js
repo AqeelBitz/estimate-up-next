@@ -1,5 +1,5 @@
 "use client";
-import  { useState } from 'react';
+import { useState } from 'react';
 import '../styles/Tutorials.css';
 
 const Tutorials = () => {
@@ -16,13 +16,13 @@ const Tutorials = () => {
       summary: "Step-by-step guide to using three-point estimation (optimistic, pessimistic, and most likely) for more accurate project predictions.",
       content: (
         <>
-          <h3>What You'll Learn:</h3>
+          <h3>What You&apos;ll Learn:</h3>
           <ul>
             <li>The PERT formula and beta distribution</li>
             <li>How to gather optimistic, pessimistic, and most likely estimates</li>
             <li>Calculating confidence intervals and standard deviation</li>
           </ul>
-          
+
           <h3>Step-by-Step Guide:</h3>
           <ol>
             <li>
@@ -39,10 +39,10 @@ const Tutorials = () => {
             </li>
             <li>
               <strong>Establish Confidence Ranges:</strong>
-              <p>E ± SD = 68% confidence, E ± 2SD = 95% confidence</p>
+              <p>E &plusmn; SD = 68% confidence, E &plusmn; 2SD = 95% confidence</p>
             </li>
           </ol>
-          
+
           <h3>Pro Tips:</h3>
           <div className="tutorial-tips">
             <div className="tip-card">
@@ -63,13 +63,13 @@ const Tutorials = () => {
       summary: "Learn how to conduct Delphi estimation rounds to reach expert consensus.",
       content: (
         <>
-          <h3>What You'll Learn:</h3>
+          <h3>What You&apos;ll Learn:</h3>
           <ul>
             <li>The fundamentals of Delphi estimation technique</li>
             <li>How to conduct all three estimation rounds</li>
             <li>Interpreting consensus results and confidence intervals</li>
           </ul>
-          
+
           <h3>Step-by-Step Guide:</h3>
           <ol>
             <li>
@@ -85,7 +85,7 @@ const Tutorials = () => {
               <p>Submit final estimates after considering feedback.</p>
             </li>
           </ol>
-          
+
           <h3>Pro Tips:</h3>
           <div className="tutorial-tips">
             <div className="tip-card">
@@ -106,12 +106,12 @@ const Tutorials = () => {
       summary: "Use historical data from similar projects for quick estimates.",
       content: (
         <>
-          <h3>What You'll Learn:</h3>
+          <h3>What You&apos;ll Learn:</h3>
           <ul>
             <li>How to use historical data for quick estimates</li>
             <li>Adjusting for differences between projects</li>
           </ul>
-          
+
           <h3>Step-by-Step Guide:</h3>
           <ol>
             <li>
@@ -136,12 +136,12 @@ const Tutorials = () => {
       summary: "Create mathematical models based on project parameters.",
       content: (
         <>
-          <h3>What You'll Learn:</h3>
+          <h3>What You&apos;ll Learn:</h3>
           <ul>
             <li>Building statistical estimation models</li>
             <li>Identifying key cost drivers</li>
           </ul>
-          
+
           <h3>Step-by-Step Guide:</h3>
           <ol>
             <li>
@@ -166,13 +166,14 @@ const Tutorials = () => {
     <div className="tutorial-container">
       <div className="tutorial-wrapper">
         <h1 className="tutorial-title">Estimation Tutorials</h1>
-        
-        {tutorials.map((tutorial) => (
-          <div 
-            key={tutorial.id} 
+
+        {/* Ensure tutorials is an array before mapping */}
+        {Array.isArray(tutorials) && tutorials.map((tutorial) => (
+          <div
+            key={tutorial.id}
             className={`tutorial-card ${expandedTutorial === tutorial.id ? 'expanded' : ''}`}
           >
-            <div 
+            <div
               className="tutorial-header"
               onClick={() => toggleTutorial(tutorial.id)}
             >
@@ -182,7 +183,7 @@ const Tutorials = () => {
                 {expandedTutorial === tutorial.id ? '▲ Show Less' : '▼ Show More'}
               </button>
             </div>
-            
+
             {expandedTutorial === tutorial.id && (
               <div className="tutorial-content">
                 {tutorial.content}

@@ -65,7 +65,7 @@ const FAQ = () => {
       )
     },
     {
-      question: "What's the minimum viable team size for Delphi estimation?",
+      question: "What&apos;s the minimum viable team size for Delphi estimation?",
       answer: (
         <>
           <p>The ideal Delphi panel for software estimation consists of <strong>5-9 experts</strong>:</p>
@@ -147,7 +147,7 @@ Typical Productivity Factors:
               </ul>
             </li>
           </ul>
-          <p>Use the "<strong>5/10 rule</strong>": If estimates are off by &gt; 10% early or &gt; 5% late in the project, trigger re-estimation.</p>
+          <p>Use the &quot;<strong>5/10 rule</strong>&quot;: If estimates are off by &gt; 10% early or &gt; 5% late in the project, trigger re-estimation.</p>
         </>
       )
     }
@@ -158,10 +158,10 @@ Typical Productivity Factors:
       <div className="faq-wrapper">
         <h1 className="faq-title">Software Estimation FAQs</h1>
         <p className="faq-subtitle">Practical guidance for implementing estimation techniques</p>
-        
+
         {faqs.map((faq, index) => (
-          <div 
-            key={index} 
+          <div
+            key={index}
             className={`faq-item ${activeIndex === index ? 'active' : ''}`}
             onClick={() => toggleFAQ(index)}
           >
