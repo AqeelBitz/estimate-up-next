@@ -97,9 +97,9 @@ Typical Productivity Factors:
 - Python: 10-15 hours/FP
 - Legacy Systems: 20-30 hours/FP`}
           </pre>
-          <p>Adjust for your organization's historical data:</p>
+          <p>Adjust for your organization&apos;s historical data:</p>
           <ol>
-            <li>Calculate your team's historical hours/FP from past projects</li>
+            <li>Calculate your team&apos;s historical hours/FP from past projects</li>
             <li>Apply a ±20% adjustment for project complexity</li>
             <li>Factor in team experience (novice teams add 15-30%)</li>
           </ol>
@@ -147,7 +147,7 @@ Typical Productivity Factors:
               </ul>
             </li>
           </ul>
-          <p>Use the &quot;<strong>5/10 rule</strong>&quot;: If estimates are off by &gt; 10% early or &gt; 5% late in the project, trigger re-estimation.</p>
+          <p>Use the &quot;5/10 rule&quot;: If estimates are off by &gt; 10% early or &gt; 5% late in the project, trigger re-estimation.</p>
         </>
       )
     }

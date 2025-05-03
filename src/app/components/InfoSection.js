@@ -1,5 +1,7 @@
 import React from 'react';
-import '../styles/InfoSection.css'; // Adjust path if needed
+import '../styles/InfoSection.css'; 
+import Image from 'next/image';
+
 
 const InfoSection = () => {
   return (
@@ -20,7 +22,7 @@ const InfoSection = () => {
             </div>
             <div className="column image-column">
               <div className="img-wrap">
-                <img src="/images/svg10.png" alt="Software Estimation Dashboard" className="img" />
+                <Image src="/images/svg10.png" alt="Software Estimation Dashboard" className="img" />
               </div>
             </div>
           </div>
@@ -43,7 +45,7 @@ const InfoSection = () => {
             </div>
             <div className="column image-column">
               <div className="img-wrap">
-                <img src="/images/svg50.png" alt="Estimation Techniques Overview" className="img" />
+                <Image src="/images/svg50.png" alt="Estimation Techniques Overview" className="img" />
               </div>
             </div>
           </div>
@@ -65,7 +67,7 @@ const InfoSection = () => {
             </div>
             <div className="column image-column">
               <div className="img-wrap">
-                <img src="/images/svg30.png" alt="Sign Up Illustration" className="img" />
+                <Image src="/images/svg30.png" alt="Sign Up Illustration" className="img" />
               </div>
             </div>
           </div>

@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Header from '../components/Header';
 import ProtectedRoute from '../components/ProtectedRoute';
+import { useCallback } from 'react';
 import '../styles/Delphi.css';
 
 const Round3 = () => {
@@ -122,7 +123,7 @@ const Round3 = () => {
         };
     }, []);
 
-    function calculateConfidenceInterval(data, confidenceLevel) {
+    const calculateConfidenceInterval = useCallback((data, confidenceLevel) =>{
         const validData = data.filter(value => typeof value === 'number');
         if (validData.length < 2) {
             return [NaN, NaN];
@@ -133,7 +134,7 @@ const Round3 = () => {
         const lowerBound = mean - z * stdError;
         const upperBound = mean + z * stdError;
         return [lowerBound, upperBound];
-    }
+    }, [standardError, getZScore]);
 
     function standardError(data) {
         const n = data.length;
@@ -179,7 +180,7 @@ const Round3 = () => {
             localStorage.setItem("upperBound", ub.toFixed(2));
             localStorage.setItem("SE", standardErrorCalc.toFixed(2));
         }
-    }, [e_name, total_effort, total_effort2, total_effort3, total_avg1, total_avg2, total_avg3]);
+    }, [e_name, total_effort, total_effort2, total_effort3, total_avg1, total_avg2, total_avg3,calculateConfidenceInterval]);
 
     return (
         <ProtectedRoute>

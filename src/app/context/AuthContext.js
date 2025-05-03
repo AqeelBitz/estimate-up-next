@@ -1,5 +1,6 @@
 'use client';
 
+import { useMemo } from 'react';
 import { createContext, useContext, useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Cookies from 'universal-cookie';
@@ -7,7 +8,7 @@ import Cookies from 'universal-cookie';
 const AuthContext = createContext();
 
 export function AuthProvider({ children }) {
-  const cookies = new Cookies();
+  const cookies = useMemo(() => new Cookies(), []);
   const router = useRouter();
   const [authState, setAuthState] = useState({
     isAuthenticated: false,
@@ -34,7 +35,7 @@ export function AuthProvider({ children }) {
     };
 
     checkAuth();
-  }, []);
+  }, [cookies]);
 
   const login = (token) => {
     cookies.set('jwt', token);

@@ -166,8 +166,8 @@ const Round1 = () => {
     e.preventDefault();
 
     if (!recipientEmail) {
-        showToast('Please enter the recipient\'s email.', 'warning');
-        return;
+      showToast('Please enter the recipient&apos;s email.', 'warning');
+    return;
     }
      if (!ROUND1_SERVICE_ID || !ROUND1_TEMPLATE_ID || !ROUND1_PUBLIC_KEY) {
         console.error("EmailJS environment variables are not set.");
@@ -360,7 +360,7 @@ ${taskList.map((task, i) =>
                            required
                            className="email-input" // Reuse existing class or create new one
                        />
-                       <label className="input-label">Recipient's Email</label>
+                       <label className="input-label">Recipient&apos;s Email</label>
                        <div className="underline"></div>
                    </div>
 

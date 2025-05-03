@@ -193,7 +193,7 @@ const Round2 = () => {
         e.preventDefault();
 
         if (!recipientEmail) {
-            showToast('Please enter the estimator\'s email.', 'warning');
+            showToast('Please enter the estimator&apos;s email.', 'warning');
             return;
         }
 
@@ -412,7 +412,7 @@ const Round2 = () => {
                                 required
                                 className="email-input"
                             />
-                            <label className="input-label">Estimator's Email</label>
+                            <label className="input-label">Estimator&apos;s Email</label>
                             <div className="underline"></div>
                         </div>
 

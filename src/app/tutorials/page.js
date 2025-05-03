@@ -27,7 +27,7 @@ const Tutorials = () => {
           <ol>
             <li>
               <strong>Gather Three Estimates:</strong>
-              <p>For each task, collect optimistic (O), most likely (M), and pessimistic (P) estimates from your team.</p>
+              <p>For each task, collect optimistic (O), most likely (M), and pessimistic (P) estimates from your team&apos;s input.</p>
             </li>
             <li>
               <strong>Calculate Expected Value:</strong>
@@ -74,7 +74,7 @@ const Tutorials = () => {
           <ol>
             <li>
               <strong>Round 1 - Initial Estimates:</strong>
-              <p>Each estimator provides independent, anonymous estimates.</p>
+              <p>Each estimator provides independent, anonymous estimates based on their expertise.</p>
             </li>
             <li>
               <strong>Round 2 - Feedback & Revision:</strong>
