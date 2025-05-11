@@ -22,7 +22,7 @@ const InfoSection = () => {
             </div>
             <div className="column image-column">
               <div className="img-wrap">
-                <Image src="/images/svg10.png" alt="Software Estimation Dashboard" className="img" />
+                <Image src="/images/svg10.png" alt="Software Estimation Dashboard" className="img" width={500} height={500}/>
               </div>
             </div>
           </div>
@@ -45,7 +45,7 @@ const InfoSection = () => {
             </div>
             <div className="column image-column">
               <div className="img-wrap">
-                <Image src="/images/svg50.png" alt="Estimation Techniques Overview" className="img" />
+                <Image src="/images/svg50.png" alt="Estimation Techniques Overview" className="img" width={500} height={500}/>
               </div>
             </div>
           </div>
@@ -67,7 +67,7 @@ const InfoSection = () => {
             </div>
             <div className="column image-column">
               <div className="img-wrap">
-                <Image src="/images/svg30.png" alt="Sign Up Illustration" className="img" />
+                <Image src="/images/svg30.png" alt="Sign Up Illustration" className="img" width={500} height={500}/>
               </div>
             </div>
           </div>

@@ -118,11 +118,12 @@ export default function ThreeP() {
   };
 
   const addTask = () => {
-    setTasks([...tasks, { name: "", subtasks: [] }]);
+    setTasks([...tasks, { 
+      name: "", 
+      subtasks: [] // Ensure subtasks array is initialized
+    }]);
     setFormSubmitted(false);
-    // When adding a task, clear any potential validation errors related to deleted tasks/subtasks
-    // Although current validation clears modal, not 'errors' state
-    setErrors({}); // Clear errors on adding new task
+    setErrors({});
   };
 
   const deleteTask = (index) => {
@@ -141,6 +142,14 @@ export default function ThreeP() {
 
   const addSubtask = (taskIndex) => {
     const updatedTasks = [...tasks];
+    // Ensure the task exists and has a subtasks array
+    if (!updatedTasks[taskIndex]) return;
+    
+    // Initialize subtasks array if it doesn't exist
+    if (!updatedTasks[taskIndex].subtasks) {
+      updatedTasks[taskIndex].subtasks = [];
+    }
+    
     updatedTasks[taskIndex].subtasks.push({
       optimistic: "",
       pessimistic: "",
@@ -148,12 +157,10 @@ export default function ThreeP() {
     });
     setTasks(updatedTasks);
     setFormSubmitted(false);
-    // When adding a subtask, clear any potential validation errors related to deleted subtasks
-    // Although current validation clears modal, not 'errors' state
     setErrors((prev) => {
       const updatedErrors = { ...prev };
       if (updatedErrors[taskIndex]?.subtasks) {
-        delete updatedErrors[taskIndex].subtasks; // Clear subtask errors for this task
+        delete updatedErrors[taskIndex].subtasks;
       }
       return updatedErrors;
     });
@@ -190,11 +197,6 @@ export default function ThreeP() {
     }
   };
 
-  // Note: The current handleTaskChange and handleSubtaskChange attempt to update the 'errors' state
-  // but the validation logic populates the modal state instead.
-  // To use 'errors' for inline validation display, the validation logic would need to be tightly coupled
-  // with these handlers and the 'errors' state structure needs to match the input structure.
-  // Keeping them as is for now, but noting the potential discrepancy.
 
   const handleTaskChange = (index, event) => {
     const updatedTasks = [...tasks];
@@ -202,13 +204,6 @@ export default function ThreeP() {
     if (updatedTasks[index]) {
       updatedTasks[index].name = event.target.value;
       setTasks(updatedTasks);
-
-      // Optionally re-validate this specific task on change if form was already submitted
-      // This requires a more sophisticated error state structure
-      // if (formSubmitted) {
-      //     const taskErrors = validateTask(updatedTasks[index]);
-      //     setErrors(prev => ({ ...prev, [index]: taskErrors })); // Example: update 'errors' state
-      // }
     }
   };
 
@@ -220,12 +215,6 @@ export default function ThreeP() {
         event.target.value;
       setTasks(updatedTasks);
 
-      // Optionally re-validate this specific task on change if form was already submitted
-      // This requires a more sophisticated error state structure
-      // if (formSubmitted) {
-      //     const taskErrors = validateTask(updatedTasks[taskIndex]);
-      //     setErrors(prev => ({ ...prev, [taskIndex]: taskErrors })); // Example: update 'errors' state
-      // }
     }
   };
 
@@ -280,11 +269,6 @@ export default function ThreeP() {
     setFormSubmitted(false); // Reset form submitted state
   };
 
-  // Helper function to get validation errors for specific inputs
-  // Note: This currently relies on the 'errors' state structure aligning with input fields,
-  // which is not fully implemented by validateTask/validateAllTasks as they populate the modal.
-  // To enable inline error display, the validation logic needs to be updated to store errors in
-  // the 'errors' state keyed by taskIndex, subtaskIndex, and field.
   const getError = (taskIndex, subtaskIndex, field) => {
     // Example: This would work if errors state was structured like { taskIndex: { subtasks: { subtaskIndex: { field: 'error message' } } } }
     // The current validate logic doesn't build this structure.
@@ -345,7 +329,6 @@ export default function ThreeP() {
           {/* Estimation Input Section */}
           <section className="pixel-estimation">
             <div className="pixel-task-container">
-              {/* Ensure tasks is an array before mapping */}
               {Array.isArray(tasks) &&
                 tasks.map((task, taskIndex) => (
                   <div key={taskIndex} className="pixel-card">
@@ -555,7 +538,7 @@ export default function ThreeP() {
                       <button
                         className="pixel-button-contained pixel-button-secondary"
                         onClick={() => addSubtask(taskIndex)}
-                        disabled={!tasks[taskIndex]?.name.trim()} // Disable if task name is empty
+                        disabled={!tasks[taskIndex]} // Disable if task name is empty
                       >
                         Add Subtask
                       </button>

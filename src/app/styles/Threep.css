@@ -158,7 +158,7 @@
 .pixel-icon-button {
   background: none;
   border: none;
-  color: var(--pixel-on-surface-variant);
+  color: red;
   cursor: pointer;
   padding: 8px;
   border-radius: 50%;
@@ -178,21 +178,6 @@
 }
 
 .pixel-task-header .pixel-text-input {
-  flex: 1;
-}
-
-.pixel-subtask-container {
-  margin-top: 16px;
-}
-
-.pixel-subtask {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 12px;
-  align-items: center;
-}
-
-.pixel-subtask .pixel-number-input {
   flex: 1;
 }
 
@@ -324,4 +309,58 @@
   border-top: 1px solid var(--pixel-outline);
   display: flex;
   justify-content: flex-end;
+}
+/* Add these styles to your existing CSS */
+.pixel-subtask-container {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pixel-subtask {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  width: 100%;
+}
+
+.pixel-subtask .pixel-input-group {
+  flex: 1;
+  min-width: 0; /* Allows inputs to shrink properly */
+}
+
+.pixel-subtask-actions {
+  display: flex;
+  align-items: center;
+}
+
+/* Make inputs more compact */
+.pixel-subtask .pixel-number-input {
+  padding: 8px 12px;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .pixel-subtask {
+    flex-wrap: wrap;
+  }
+  
+  .pixel-subtask .pixel-input-group {
+    flex: 1 1 100%;
+  }
+  
+  .pixel-subtask-actions {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .pixel-subtask {
+    gap: 8px;
+  }
+  
+  .pixel-subtask .pixel-number-input {
+    padding: 6px 8px;
+    font-size: 0.9rem;
+  }
 }
