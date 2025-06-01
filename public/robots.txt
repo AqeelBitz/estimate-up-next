@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://estimate-up-next.vercel.app/
+
+# Sitemaps
+Sitemap: https://estimate-up-next.vercel.app/sitemap.xml
